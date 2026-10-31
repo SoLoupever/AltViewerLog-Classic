@@ -1,0 +1,50 @@
+## Interface: 50504, 20506, 11509, 16001
+## Title: AltViewerLog
+## Notes: Visualiseur multi-personnages : sacs, banque, personnages
+## Author: SoLoup_ever
+## Version: 1.0.0
+## IconTexture: Interface\AddOns\AltViewerLog\Logo_Alt.blp
+## SavedVariables: AltViewerLogDB
+## Dependencies: ViewerLog
+
+## ── LIBRAIRIES ────────────────────────────────────────────────────
+libs\LibStub\LibStub.lua
+libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
+
+## ── LOCALISATION ─────────────────────────────────────────────────
+locales\Locales_frFR.lua
+locales\Locales_enUS.lua
+
+## ── NOYAU ─────────────────────────────────────────────────────────
+core\Init.lua
+core\Debug.lua
+core\DataProvider.lua
+core\Events.lua
+core\Minimap.lua
+core\SlashCmd.lua
+
+## ── THÈME ─────────────────────────────────────────────────────────
+ui\Theme.lua
+
+## ── VUES ──────────────────────────────────────────────────────────
+views\Shared.lua
+views\CategoryStore.lua
+views\Categories.lua
+views\Bags.lua
+
+## ── FONCTIONNALITÉS ───────────────────────────────────────────────
+fonctionnalite\RealmToggle.lua
+fonctionnalite\Characters.lua
+fonctionnalite\Bank.lua
+fonctionnalite\Search.lua
+fonctionnalite\Gear.lua
+fonctionnalite\CategoryManager.lua
+fonctionnalite\CategoryDnD.lua
+
+## ── INTERFACE ─────────────────────────────────────────────────────
+ui\MainFrame.lua
+ui\Sidebar.lua
+ui\DiscordButton.lua
+ui\ScrollArea.lua
+ui\Settings.lua
+ui\BottomBar.lua

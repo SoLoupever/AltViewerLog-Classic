@@ -1,0 +1,21 @@
+## Interface: 50504, 20506, 11509, 16001
+## Title: AltViewerLog |cff00ff00Professions|r
+## Notes: Suivi des métiers pour AltViewerLog (paliers, rangs, recettes).
+## Author: SoLoup_ever
+## RequiredDeps: AltViewerLog
+## Version: 1.0.0
+## IconTexture: Interface\AddOns\AltViewerLog\Logo_Alt.blp
+
+## ── LOCALISATION ─────────────────────────────────────────────────
+locales\Locales_frFR.lua
+locales\Locales_enUS.lua
+
+## ── DONNÉES ──────────────────────────────────────────────────────
+data\Constants.lua
+
+## ── INTERFACE ────────────────────────────────────────────────────
+ui\RecipesBar.lua
+ui\View.lua
+
+## ── INIT — Chargé en dernier ─────────────────────────────────────
+Init.lua
