@@ -64,7 +64,7 @@ ns.btnGear       = CreateMenuButton("...", btnBank,      -BTN_GAP)
 ns.btnChars   = btnChars
 
 btnChars:SetScript("OnClick",   function() CloseAllPopups(); ns.activeFilterCat = nil; ns.RefreshCharacterList() end)
-btnBank:SetScript("OnClick",    function() CloseAllPopups(); ns.ShowBank(ns.bankViewChar or UnitName("player"), ns.bankViewRealm or GetRealmName()) end)
+btnBank:SetScript("OnClick",    function() CloseAllPopups(); local r, c = ns.DP_GetPlayerIdentity(); ns.ShowBank(ns.bankViewChar or c, ns.bankViewRealm or r) end)
 ns.btnGear:SetScript("OnClick", function() CloseAllPopups(); ns.ShowGear() end)
 
 -- Point d'ancrage pour les dépendances (Graph, Professions, GuildeLog…).

@@ -296,8 +296,9 @@ function ns.ShowGear(selectedChar, selectedRealm)
     if ns.scrollFrame then ns.scrollFrame:SetVerticalScroll(0) end
     if not ns.DP_IsReady() then return end
 
-    selectedChar  = selectedChar  or UnitName("player")
-    selectedRealm = selectedRealm or GetRealmName()
+    local myRealm, myName = ns.DP_GetPlayerIdentity()
+    selectedChar  = selectedChar  or myName
+    selectedRealm = selectedRealm or myRealm
 
     local offsetY = -12
 
@@ -355,7 +356,8 @@ function ns.ShowGear(selectedChar, selectedRealm)
     end
 
     -- En-tête du perso sélectionné
-    local isOnline = (selectedChar == UnitName("player") and selectedRealm == GetRealmName())
+    local curRealm, curName = ns.DP_GetPlayerIdentity()
+    local isOnline = (selectedChar == curName and selectedRealm == curRealm)
     local hdrStone = CreateFrame("Button", nil, ns.scrollChild)
     hdrStone:SetSize(28, 28)
     hdrStone:SetPoint("TOPLEFT", 8, offsetY - 1)

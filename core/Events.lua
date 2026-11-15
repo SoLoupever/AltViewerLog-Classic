@@ -42,8 +42,7 @@ eventFrame:RegisterEvent("PLAYER_MONEY")
 eventFrame:SetScript("OnEvent", function(self, event, ...)
 
     if event == "PLAYER_LOGIN" then
-        ns.player = UnitName("player")
-        ns.realm  = GetRealmName()
+        ns.realm, ns.player = ns.DP_GetPlayerIdentity()
 
         AltViewerLogDB.settings = AltViewerLogDB.settings or {}
         if AltViewerLogDB.settings.sortByPop == nil then
@@ -82,8 +81,7 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
         end)
 
     elseif event == "PLAYER_ENTERING_WORLD" then
-        ns.player = UnitName("player")
-        ns.realm  = GetRealmName()
+        ns.realm, ns.player = ns.DP_GetPlayerIdentity()
         -- Rafraîchir l'UI si elle est ouverte
         C_Timer.After(5, function()
             if ns.mainFrame and ns.mainFrame:IsShown() and ns.currentView then

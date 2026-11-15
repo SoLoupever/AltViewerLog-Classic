@@ -111,8 +111,7 @@ local function GetDefaultChar()
     local vlAPI = _G.ViewerLogAPI
     if not vlAPI or not vlAPI.IsReady() then return nil, nil end
 
-    local player = UnitName("player")
-    local realm  = GetRealmName()
+    local realm, player = vlAPI.GetPlayerIdentity()
 
     local myReps = vlAPI.GetReputations(player, realm)
     if myReps and next(myReps) then

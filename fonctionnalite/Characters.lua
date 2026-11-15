@@ -499,8 +499,7 @@ function ns.RefreshCharacterList()
         -- directement les résultats.
         if (query ~= "") or (not ns.IsRealmCollapsed(realmName)) then
             local charList = shownChars
-            local currentPlayer = UnitName("player")
-            local currentRealm  = GetRealmName()
+            local currentRealm, currentPlayer = ns.DP_GetPlayerIdentity()
 
             table.sort(charList, function(a, b)
                 local aOnline = (a.name == currentPlayer and realmName == currentRealm)

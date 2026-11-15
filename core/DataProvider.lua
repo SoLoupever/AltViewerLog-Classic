@@ -86,6 +86,16 @@ function ns.DP_GetCharData(realmName, charName)
     return _G.ViewerLogAPI.GetCharacter(charName, realmName)
 end
 
+-- (realm, nom) du perso connecté, clé identique à celle de ViewerLog.
+function ns.DP_GetPlayerIdentity()
+    local vlAPI = _G.ViewerLogAPI
+    if vlAPI and vlAPI.GetPlayerIdentity then
+        local realm, name = vlAPI.GetPlayerIdentity()
+        if realm then return realm, name end
+    end
+    return GetRealmName(), (UnitName("player"))
+end
+
 -- Itère tous les personnages via un callback cb(realm, char, data).
 function ns.DP_IterateChars(cb)
     if not ns.DP_IsReady() then return end

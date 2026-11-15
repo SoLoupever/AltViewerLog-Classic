@@ -73,8 +73,7 @@ local function ClassHex(class)
 end
 
 function ns.DumpGoldDebug()
-    local currentPlayer = UnitName("player")
-    local currentRealm  = GetRealmName()
+    local currentRealm, currentPlayer = ns.DP_GetPlayerIdentity()
     local SEP = "|cff444444" .. string.rep("─", 52) .. "|r"
 
     print(SEP)
