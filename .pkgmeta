@@ -1,10 +1,10 @@
-package-as: AltViewerLog-Classic
+package-as: AltViewerLog
 
 move-folders:
-  AltViewerLog-Classic/AltViewerLog_Graph: AltViewerLog_Graph
-  AltViewerLog-Classic/AltViewerLog_GuildeLog: AltViewerLog_GuildeLog
-  AltViewerLog-Classic/AltViewerLog_Professions: AltViewerLog_Professions
-  AltViewerLog-Classic/AltViewerLog_Reput: AltViewerLog_Reput
+  AltViewerLog/AltViewerLog_Graph: AltViewerLog_Graph
+  AltViewerLog/AltViewerLog_GuildeLog: AltViewerLog_GuildeLog
+  AltViewerLog/AltViewerLog_Professions: AltViewerLog_Professions
+  AltViewerLog/AltViewerLog_Reput: AltViewerLog_Reput
 
 ignore:
   - .github
